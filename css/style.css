@@ -21,3 +21,85 @@ h6 {
 p {
   margin: 0;
 }
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+	color: #34495e;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+
+h1 {
+	margin: 0;
+	font-size: 2em;
+}
+
+.navigation {
+	margin-top: 5px;
+
+}
+
+h1, .navigation a {
+	padding: 10px 15px;
+	text-align: center;
+	display: block;
+}
+
+.navigation {
+	color: #34495e;
+	font-size: .99em;
+}
+
+.navigation a:hover {
+	color: #500231;
+}
+
+
+
+.header, .navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+	padding-top: .5em;
+	padding-bottom: .5em;
+}
+
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+/*
+
+
+@media (min-width: 769px) {
+	.header,
+	.main-nav {
+		display: flex;
+	}
+	.header {
+		flex-direction: column;
+		align-items: center;
+    	.header{
+		width: 80%;
+		margin: 0 auto;
+		max-width: 1150px;
+	}
+	}
+
+}
+
+@media (min-width: 1025px) {
+	.header {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+}
+*/
