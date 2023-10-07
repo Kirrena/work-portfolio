@@ -1,3 +1,9 @@
+:root {
+   --lightgray: gray;
+
+}
+
+
 * {
   box-sizing: border-box;
 }
@@ -26,23 +32,23 @@ ul {
   margin: 0;
   padding: 0;
   list-style: none;
-  color: #2fa7a3;
 }
 
 a {
     text-decoration: none;
     font-size: 1.2em;
+	color: white;
 }
 
 
 h1 {
 	margin: 0;
 	font-size: 2em;
-	background-color: #2fa7a3;
+	background-color: white;
 }
 
 .header {
-	background-color: rgb(2, 60, 60);
+	background-color: var(--lightgray);
 }
 
 h1, .navigation a {
@@ -66,15 +72,32 @@ h1, .navigation a {
 }
 
 .navigation a:hover {
-	color: #500231;
+	color: black;
 }
 
 
 .hero-banner {
-    display: flexbox;
+    height: 20vh;
 	background-image: url("../images/02-hero-bg.jpg");
-
+    background-size: cover;
+	position: relative;
+	display: block;
 }
+
+.hero-title {
+    font-size: 2em;
+	background-color: var(--lightgray);
+	
+}	
+
+.hero-text {
+	position: absolute;
+	text-align: left;
+	padding-left: 0.5em;
+	left: 65%;
+	top: 40%;
+}
+
 
 h2 {
   padding:20px;
