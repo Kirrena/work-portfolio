@@ -87,22 +87,43 @@ h1, .navigation a {
 .hero-title {
     font-size: 2em;
 	background-color: var(--lightgray);
+	padding-top: 0px;
+	padding-bottom: 0px;
 	
 }	
 
 .hero-text {
 	position: absolute;
-	text-align: left;
-	padding-left: 0.5em;
-	left: 65%;
-	top: 40%;
+	left: 60%;
+	top: 50%;
 }
 
 
 h2 {
   padding:20px;
-
 }
+
+.page-wrapper {
+     display:grid;
+	 grid-template-rows: auto auto auto;
+	 grid-template-areas: "page-section"
+	                      "page-section"
+						  "page-section";
+}
+
+.page-section {
+    grid-area: "page-section";
+}
+
+.page-section h2 {
+	font-size: 2em;
+}
+
+#about, #work, #contact {
+	display: flex;
+}
+
+
 /* ================================= 
   Media Queries
 ==================================== */
