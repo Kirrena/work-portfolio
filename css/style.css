@@ -2,7 +2,7 @@
    --lightgray: gray;
 
 }
-
+	
 
 * {
   box-sizing: border-box;
@@ -102,6 +102,15 @@ h1, .navigation a {
 	top: 70px;
 }
 
+#profil {
+   height: 20vh;
+   width: 150px;
+   background-image: url("../images/profil.jpg");
+   background-size: cover;
+
+
+}
+
 .page-wrapper {
      display:grid;
 	 grid-template-rows: 200px 800px 50px;
@@ -127,7 +136,7 @@ h1, .navigation a {
 
 .page-section {
 	display:grid;
-	grid-template-columns: 20% 80%;
+	grid-template-columns: 10% 90%;
 	grid-template-areas: "side .";
 	
 }
@@ -135,15 +144,16 @@ h1, .navigation a {
 .side{
     grid-area: "side";
 	border-right: 4px solid var(--lightgray);
-	
-
+	text-align: end;
+	padding-right: 10px;
 }
+
 .page-section h2 {
-	font-size: 2em;
+	font-size: 30px;
 }
 
 #containt-container-about {
-	padding: 30px;
+	padding: 0px 30px 0px 30px;
 }
 
 #containt-container-work {
@@ -158,7 +168,6 @@ h1, .navigation a {
 	;
 	gap: 10px 10px;
 	padding: 0px 30px 30px 30px;
-    cursor: pointer;
 }
 
 .surf {
@@ -208,8 +217,9 @@ h1, .navigation a {
 	position: relative;
 }
 
-.image :hover {
-	opacity: 0.3;
+.surf:hover, .led:hover, .calc:hover, .puzzle:hover, .buddy:hover  {
+	opacity: 0.7;
+	cursor: pointer;
 }
 /*.image {
 	background-position: center;
@@ -226,7 +236,7 @@ h1, .navigation a {
 	background-color: var(--lightgray);
 	color: white;	
     position: absolute;
-    top: 100px;
+    top: 110px;
     padding: 15px;
     width: 130px;
 	font-size: 15px;
@@ -235,7 +245,7 @@ h1, .navigation a {
 .sub-heading {
 	color: white;	
     position: absolute;
-    top: 120px;
+    top: 130px;
     padding: 12px;
 	font-size: 10px;
 
@@ -262,31 +272,33 @@ h1, .navigation a {
   Media Queries
 ==================================== */
 
-/*
 
 
-@media (min-width: 769px) {
-	.header,
-	.main-nav {
-		display: flex;
-	}
-	.header {
-		flex-direction: column;
-		align-items: center;
-    	.header{
-		width: 80%;
-		margin: 0 auto;
-		max-width: 1150px;
-	}
-	}
 
+@media screen and (max-width: 1200px) {
+     .page-section h2 {
+         	font-size: 15px;
+     }	 
 }
 
-@media (min-width: 1025px) {
-	.header {
-		flex-direction: row;
-		justify-content: space-between;
-	}
+@media screen and (max-width: 600px) {
+	.page-section h2 {
+			font-size: 15px;
+	}	 
 
+	#containt-container-work {
+		display: grid;
+	    grid-template-columns: 100%;
+	    grid-template-rows: auto auto auto auto auto auto;
+		grid-template-areas:
+	                  "surf"
+					  "led"
+                      "calc"
+	                  "puzzle" 
+		              "buddy";  
+	}
 }
-*/
+
+
+
+
