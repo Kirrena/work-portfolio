@@ -3,6 +3,19 @@
 
 }
 
+/* with a color overlay I wanted to make a color filter on the site
+ and make it no display case hovering images but unfortunatelly I couldnt make it work:(
+alternatively I made opacity different hovering....*/
+
+/*#overlay {
+  position:fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color:rgba(0, 128, 128, 0.3);
+  z-index: 100;
+}*/
 
 html {
    font-size: 62.5%;
@@ -102,7 +115,7 @@ h1, .navigation a {
 
 .hero-text {
 	position: absolute;
-	right: -15px;
+	right: -5px;
 	top: 70px;
 }
 
@@ -154,7 +167,7 @@ h1, .navigation a {
 }
 
 .page-section h2 {
-	font-size: 4rem;
+	font-size: 2rem;
 }
 
 #containt-container-about {
@@ -163,51 +176,49 @@ h1, .navigation a {
 }
 
 #containt-container-work {
-	display: flex;
-	flex-direction: column;
+	display: grid;
 	min-height: 100%;
-	/*grid-template-columns: 50% 50%;
+	grid-template-rows: auto auto auto auto auto ;
 	grid-template-areas:
-	"surf surf"
-	"surf surf"
-	"led calc"
-	"puzzle buddy"
-	;*/
+	"surf"
+	"led"
+	"calc"
+	"puzzle"
+	"buddy";
 	gap: 10px 10px;
 	padding: 0px 30px 30px 30px;
 }
 
 .surf {
-	/*grid-area: surf;*/
+	grid-area: surf;
 	background-image: url("../images/02-portfolio-4.jpg");
 }
 
 
 .led {
-	/*grid-area: led;*/
+    grid-area: led;
 	background-image: url("../images/02-portfolio-1.jpg");
 }
 
 .calc {
-	/*grid-area: calc;*/
+	grid-area: calc;
 	background-image: url("../images/02-portfolio-2.jpg");
 }
 
 
 .puzzle {
-	/*grid-area: puzzle;*/
+	grid-area: puzzle;
 	background-image: url("../images/02-portfolio-3.jpg");
 }	
 
 .buddy {
-	/*grid-area: buddy;*/
+	grid-area: buddy;
 	background-image: url("../images/02-run-buddy.jpg");
 	background-size: cover;
 }
 
 .surf:hover, .led:hover, .calc:hover, .puzzle:hover, .buddy:hover  {
-	opacity: 0.7;
-	cursor: pointer;
+	opacity: 0.8;
 }
 
 .image {
@@ -254,35 +265,30 @@ h1, .navigation a {
 	font-size: 1.3rem;
 	
 }
+
+
 /* ================================= 
   Media Queries
 ==================================== */
 
 
 
-
-@media screen and (max-width: 1200px) {
-     .page-section h2 {
-         	font-size: 15px;
-     }	 
-}
-
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 600px) {
 	.page-section h2 {
-			font-size: 15px;
+			font-size: 3rem;
 	}	 
 
 	#containt-container-work {
-		display: grid;
-	    grid-template-columns: 100%;
-	    grid-template-rows: auto auto auto auto auto auto;
-		grid-template-areas:
-	                  "surf"
-					  "led"
-                      "calc"
-	                  "puzzle" 
-		              "buddy";  
+    grid-template-columns: 50% 50%;
+	grid-template-rows: auto auto auto auto;
+	grid-template-areas:
+	"surf surf"
+	"surf surf"
+	"led calc"
+	"puzzle buddy";  
+	gap: 10px 10px;
 	}
+	
 }
 
 
