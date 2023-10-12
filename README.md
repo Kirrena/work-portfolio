@@ -14,8 +14,12 @@ This website's layout and content adapt beautifully to different screen sizes an
 Omar Patel [https://www.linkedin.com/in/omarsalimpatel]
 
 ## Link
+[My Work Portfolio website](https://kirrena.github.io/work-portfolio/)
+
+URL: https://kirrena.github.io/work-portfolio/
 
 ## Screenshot
+![work](https://github.com/Kirrena/work-portfolio/assets/74355186/f90896e3-b99c-47ba-a667-7922bd2d4507)
 
 ## License
 MIT license
